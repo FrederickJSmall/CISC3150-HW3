@@ -7,7 +7,7 @@ public class NQueen {
 	{
 		this.nQueens = nQueens;
 	}
-	public boolean locateSquare(int board[][],int col,int row)
+	public boolean findNextSquare(int board[][],int col,int row)
 	{
 		System.out.printf("Column=%s,Row=%s\n",col,row);
 		if (col >= this.nQueens)
@@ -17,10 +17,12 @@ public class NQueen {
 			// System.out.printf("%s",i);
 			if (checkNQueenSquares(board,i,col)) {
 				board[i][col] = 1;
-				if (locateSquare(board,col + 1,row))
+				if (findNextSquare(board,col + 1,row))
 						return true;
 				board[i][col]=0;
 			}
+			//
+			//row++;
 		}
 		return false;
 	}
