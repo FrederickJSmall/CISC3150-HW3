@@ -4,7 +4,10 @@ public class Question1 {
 	public static void main (String[] args)
 	{
 		int nQueens = 8;
-		Question1 question = new Question1();
+		int solutions = 0;
+		int column = 0;
+		//Question1 question = new Question1();
+		//NQueen question = new NQueen();
 		System.out.println("The purpose of this application is to Play nQueens. It will try to deermine the");
 		System.out.println("maximum number of combinations a quuen can exist on a board");
 		System.out.println("based on an inupt value from the user");
@@ -13,32 +16,41 @@ public class Question1 {
 		Scanner point = new Scanner(System.in);
 		
 		//nQueens = point.nextInt();
-		for (int i = 0;i< nQueens;i++){
-			System.out.printf("Game Number %s\n",i+1);
+		NQueen question = new NQueen(nQueens);
+		for (int row = 0;row< nQueens;row++){
+			System.out.printf("Game Number %s\n",row+1);
 			int[][] board = new int[nQueens][nQueens];
 		
 
-			if(!question.locateSquare(board,i,nQueens)){
+			//if(!question.locateSquare(board,column,nQueens,row)){
+			if(!question.locateSquare(board,column,row)){
 				System.out.println("Bad number of queens");
 			}
-			
-			question.printBoard(board, nQueens);
+			else
+			{
+				solutions++;
+				//question.printBoard(board, nQueens);
+				question.printBoard(board);
+			}
 			System.out.println(" ***** GAME OVER *****");
 			System.out.println("\n\n");
 		}
 
 		question = null;
 		System.out.println("");
+		System.out.printf("Solutions=%s\n",solutions);
 		System.out.println("Done");
 	}
-	public boolean locateSquare(int board[][],int col,int nQueens)
+	/*
+	public boolean locateSquare(int board[][],int col,int nQueens,int row)
 	{
 		if (col >= nQueens)
 			return true;
 		for (int i=0;i < nQueens;i++) {
+			// System.out.printf("%s",i);
 			if (placeSquare(board,i,col,nQueens)) {
 				board[i][col] = 1;
-				if (locateSquare(board,col + 1,nQueens))
+				if (locateSquare(board,col + 1,nQueens,row))
 						return true;
 				board[i][col]=0;
 			}
@@ -50,6 +62,7 @@ public class Question1 {
 		int i;
 		int j;
 
+		if (row >= nQueens) return false;
 		//Check rows
 		for (i = 0; i < col; i++)
 		{
@@ -68,7 +81,7 @@ public class Question1 {
 	}
 	public void printBoard(int board[][],int nQueens)
 	{
-		System.out.printf("X\t");	
+		System.out.printf("0\t");	
 		for (int i =0; i< nQueens;i++)
 		{
 			System.out.printf("%s\t",i+1);			
@@ -90,5 +103,5 @@ public class Question1 {
 			System.out.println("");
 		}
 	}
-	
+	*/
 }
