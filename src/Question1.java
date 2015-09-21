@@ -23,6 +23,7 @@ public class Question1 {
 		
 
 			//if(!question.locateSquare(board,column,nQueens,row)){
+			System.out.println("Question1");
 			if(!question.locateSquare(board,column,row)){
 				System.out.println("Bad number of queens");
 			}

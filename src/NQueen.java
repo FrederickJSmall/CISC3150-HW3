@@ -9,11 +9,13 @@ public class NQueen {
 	}
 	public boolean locateSquare(int board[][],int col,int row)
 	{
+		System.out.printf("Column=%s,Row=%s\n",col,row);
 		if (col >= this.nQueens)
 			return true;
+		
 		for (int i=0;i < this.nQueens;i++) {
 			// System.out.printf("%s",i);
-			if (placeSquare(board,i,col)) {
+			if (checkNQueenSquares(board,i,col)) {
 				board[i][col] = 1;
 				if (locateSquare(board,col + 1,row))
 						return true;
@@ -22,12 +24,12 @@ public class NQueen {
 		}
 		return false;
 	}
-	private boolean placeSquare(int board[][],int row,int col)
+	private boolean checkNQueenSquares(int board[][],int row,int col)
 	{
 		int i;
 		int j;
 
-		if (row >= this.nQueens) return false;
+		//if (row >= this.nQueens) return false;
 		//Check rows
 		for (i = 0; i < col; i++)
 		{
@@ -62,7 +64,7 @@ public class NQueen {
 				}
 				else
 				{
-					System.out.print(" \t");
+					System.out.print("X\t");
 				}
 			}
 			System.out.println("");
