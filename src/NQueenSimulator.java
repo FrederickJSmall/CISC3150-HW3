@@ -73,7 +73,7 @@ public class NQueenSimulator {
        private void printBoard(int board[][])
        {
               //System.out.printf("\n\nGame Solution %s\n",solution);
-              System.out.printf("\n\nPossible Game Solution\n");
+              System.out.printf("\n\nPossible N-Queen Solution\n");
               System.out.printf("======================\n");
               
               System.out.printf("0\t");  
