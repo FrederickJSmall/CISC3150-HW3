@@ -9,7 +9,7 @@ public class NQueen {
 	}
 	public boolean findNextSquare(int board[][],int col,int row)
 	{
-		System.out.printf("Column=%s,Row=%s\n",col,row);
+		//System.out.printf("Column=%s,Row=%s\n",col,row);
 		if (col >= this.nQueens)
 			return true;
 		
@@ -66,7 +66,7 @@ public class NQueen {
 				}
 				else
 				{
-					System.out.print("X\t");
+					System.out.print(" \t");
 				}
 			}
 			System.out.println("");
