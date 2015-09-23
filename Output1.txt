@@ -211,3 +211,4 @@ Possible N-Queen Solution
 -       -       -       -       -       -
 
 NQueens has 10 solutions for a boards size of 5x5
+
