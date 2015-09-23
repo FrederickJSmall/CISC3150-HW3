@@ -2,6 +2,7 @@
  * Frederick Small
  * CISC 3150
  */
+
 import java.util.Scanner;
 
 public class Question1 {
