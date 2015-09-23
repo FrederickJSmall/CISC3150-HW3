@@ -211,3 +211,7 @@ Possible N-Queen Solution
 -       -       -       -       -       -
 
 NQueens has 10 solutions for a boards size of 5x5
+<<<<<<< HEAD
+=======
+
+>>>>>>> branch 'master' of https://github.com/FrederickJSmall/CISC3150-HW3.git

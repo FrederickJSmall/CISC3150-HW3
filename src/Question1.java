@@ -26,6 +26,7 @@ public class Question1 {
             System.out.printf("\nNQueens has %s solutions for a boards size of %sx%s", nQueenSim.calcNQueen(board,0),nQueens,nQueens);
             
             nQueenSim = null;
+            keyboard.close();
        }
 }
 

@@ -12,10 +12,10 @@ public class NQueenSimulator {
        {
               //System.out.printf("Running simulation with for a size of %sx%s\n",nQueens,nQueens);
               int totalSettingCount = 0;
-              int solution = 0;
+              //int solution = 0;
               if (currentRow == nQueens)
               {
-                     solution++;
+                     //solution++;
                      //printBoard(board,N,solution);
                      printBoard(board);
                      return 1;

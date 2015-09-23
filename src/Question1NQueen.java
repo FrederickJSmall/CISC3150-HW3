@@ -1,4 +1,4 @@
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class Question1NQueen {
 	public static void main (String[] args)
@@ -12,8 +12,8 @@ public class Question1NQueen {
 		System.out.println("single combination where the queens do not cross paths");
 		System.out.println("based on an inupt value from the user");
 		System.out.println("");
-		@SuppressWarnings("resource")
-		Scanner point = new Scanner(System.in);
+		//@SuppressWarnings("resource")
+		//Scanner point = new Scanner(System.in);
 		
 		//nQueens = point.nextInt();
 		NQueen question = new NQueen(nQueens);
