@@ -1,0 +1,38 @@
+The purpose of this application is to Play nQueens. It will try to determine the
+maximum number of times a queen can exist on a board based on an input 
+value from the user; w/o the queens being able to cross each other
+
+Please enter the number of NQueens
+
+Calculating the possible number of NQueens combinations for a checkerboard size of 4x4
+
+
+Possible N-Queen Solution
+
+0	1	2	3	4	
+-	-	-	-	-	
+1	 	Q	 	 	
+-	-	-	-	-	
+2	 	 	 	Q	
+-	-	-	-	-	
+3	Q	 	 	 	
+-	-	-	-	-	
+4	 	 	Q	 	
+-	-	-	-	-	
+
+
+
+Possible N-Queen Solution
+
+0	1	2	3	4	
+-	-	-	-	-	
+1	 	 	Q	 	
+-	-	-	-	-	
+2	Q	 	 	 	
+-	-	-	-	-	
+3	 	 	 	Q	
+-	-	-	-	-	
+4	 	Q	 	 	
+-	-	-	-	-	
+
+NQueens has 2 solutions for a boards size of 4x4

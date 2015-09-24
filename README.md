@@ -6,6 +6,9 @@ References
 Byers, Mark (2013) Eight Queens Algorithm Retrieved from 
 http://stackoverflow.com/questions/13398945/eight-queens-algorithm
 
+CSBreakdown (2015) N-Queens Problem - Backtracking retrieved from 
+https://www.youtube.com/watch?v=kX5frmc6B7c
+
 Gupta, Sukrit (2014) The n Queen Problem Retrieved from 
 http://www.slideshare.net/smartsukrit/the-n-queen-problem?related=2
 
