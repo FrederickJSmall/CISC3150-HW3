@@ -27,6 +27,7 @@ public class NQueenSimulator {
               if (currentRow == nQueens)
               {
                      printBoard(board);
+                     if (debug) printBoardValue(board);
                      return 1;
               }
               
@@ -68,6 +69,7 @@ public class NQueenSimulator {
        }
        private void scanRow(int[][] board, int row, int column, int currentRow)
        {
+    	   if (debug) System.out.println("");
     	   if (debug) System.out.printf("BEFORE(C): CurrentRow=%s TestingRow=%s, Column=%s, Value=%s\n",currentRow,row,column,board[row][column]);
            if (board[row][column] == 0)
                board[row][column] = -(1+currentRow);
@@ -75,6 +77,7 @@ public class NQueenSimulator {
        }
        private void scanLeft(int[][] board, int row, int column, int currentRow,int rowSpan)
        {
+    	   if (debug) System.out.println("");
     	   if (debug) System.out.printf("BEFORE(L): CurrentRow=%s TestingRow=%s, Column=%s, Value=%s\n",currentRow,row,column,board[row][column]);
            if(column-rowSpan>=0 && board[row][column-rowSpan]==0)
                board[row][column-rowSpan] = -(1+currentRow);
@@ -82,6 +85,7 @@ public class NQueenSimulator {
        }
        private void scanRight(int[][] board, int row, int column, int currentRow,int rowSpan)
        {
+    	   if (debug) System.out.println("");
     	   if (debug) System.out.printf("BEFORE(R): CurrentRow=%s TestingRow=%s, Column=%s, Value=%s\n",currentRow,row,column,board[row][column]);
            if(column+rowSpan < nQueens && board[row][column+rowSpan]==0)
                board[row][column+rowSpan] = -(1+currentRow);
@@ -90,7 +94,7 @@ public class NQueenSimulator {
        private void resetBoard(int[][] board,int currentRow)
        {
     	   //if (debug) System.out.printf("AFTER(L) : CurrentRow=%s Row=%s, Column=%s, Value=%s\n\n",currentRow,row,column,board[row][column]);
-    	   if (debug) printBoardValue(board);
+    	   //if (debug) printBoardValue(board);
     	   for(int row=currentRow+1;  row<nQueens;row++)
            {
                 for (int col=0;col <nQueens; col++)
@@ -103,30 +107,31 @@ public class NQueenSimulator {
        }
        private void printBoardValue(int board[][])
        {
+    	   System.out.println("");
     	   System.out.println("\tBoard Values before reset");
            //System.out.printf("\n\nGame Solution %s\n",solution);
            //System.out.printf("\n\nPossible N-Queen Solution\n");
-           //System.out.printf("======================\n");
+           System.out.printf("\t=========================\n");
            
            System.out.printf("\t");
-           System.out.printf("0\t");  
+           System.out.printf(" 0\t");  
            for (int i =0; i<nQueens;i++)
            {
-                  System.out.printf("%s\t",i+1);                  
+                  System.out.printf("%2s\t",i+1);                  
            }
            System.out.println("");
            System.out.printf("\t");
            
            for (int i =0; i<=nQueens;i++)
            {
-                  System.out.printf("-\t",i+1);                  
+                  System.out.printf("--\t",i+1);                  
            }
            
            System.out.println("");
            System.out.printf("\t");
            for (int i =0; i< nQueens;i++)
            {
-                  System.out.printf("%s\t",i+1);
+                  System.out.printf("%2s\t",i+1);
                   for(int j = 0; j < nQueens;j++)
                   {
                         //if (board[i][j] > 0){
@@ -141,7 +146,7 @@ public class NQueenSimulator {
                   System.out.printf("\t");
                   for (int k =0; k<=nQueens;k++)
                   {
-                         System.out.printf("-\t",k+1);                  
+                         //System.out.printf("--\t",k+1);                  
                   }
                   System.out.println("");
                   System.out.printf("\t");
